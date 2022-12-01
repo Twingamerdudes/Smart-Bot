@@ -11,19 +11,6 @@ const configuration = new Configuration({
 });
 const openai = new OpenAIApi(configuration);
 
-async function createRespone(history, message){
-    const response = await openai.createCompletion({
-        model: "text-davinci-003",
-        prompt: history + " " + message,
-        temperature: 0.7,
-        max_tokens: 256,
-        top_p: 1,
-        frequency_penalty: 0,
-        presence_penalty: 0,
-    });
-    return response.data.choices[0].text
-}
-
 const client = new Client({
     intents: [
         GatewayIntentBits.Guilds,
