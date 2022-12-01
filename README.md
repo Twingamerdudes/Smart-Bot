@@ -12,6 +12,7 @@ Make a file called .env and put your discord bot token and open ai key in there.
 Format:
 
 DISCORD_TOKEN=(your token)
+
 OPENAI_API_KEY=(openai key)
 
 # Conclusion
